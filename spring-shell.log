@@ -1,0 +1,12 @@
+1685794783650:help
+1685794870809:clear
+1685794872124:help
+1685794878839:clear
+1685794885165:quit
+1685796230051:hello-world
+1685796235369:hello-world ARG
+1685796262981:hello-world --arg boot
+1685796390572:hello-world ArG
+1685796396921:hello-world --arg ArG
+1685796401981:hello-world --arg asd qwe
+1685796417353:hello-world --arg "We can drive foreign cars"
