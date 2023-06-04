@@ -18,4 +18,6 @@ public class MyCommands {
     public String helloWorld(@ShellOption(defaultValue = "spring") String arg) {
         return "Hello world " + arg;
     }
+
+
 }
