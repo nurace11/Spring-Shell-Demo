@@ -1,6 +1,7 @@
 package com.nuracell.shelltest.command.test;
 
 import com.nuracell.shelltest.exception.CustomException;
+import com.nuracell.shelltest.exception.CustomExceptionWithErrorCode;
 import com.nuracell.shelltest.exception.resolver.CustomExceptionResolver;
 import org.springframework.asm.Type;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +46,29 @@ public class ExceptionHandlingCommands {
                 .and()
                 .withErrorHandling()
                     .resolver(resolver)
+
+                .and()
+                .build();
+    }
+
+    @Bean
+    public CommandRegistration commandRegistrationWithExitCode() {
+        return CommandRegistration.builder()
+                .command("exitcode")
+                .withTarget().function((c) -> {
+                    throw new CustomExceptionWithErrorCode("MSG", 4);
+                })
+
+                .and()
+                .withExitCode()
+                .map(CustomExceptionWithErrorCode.class, 3)
+                .map(t -> {
+                    if (t instanceof CustomExceptionWithErrorCode) {
+                        return ((CustomExceptionWithErrorCode) t).getExitCode();
+                    }
+
+                    return 0;
+                })
 
                 .and()
                 .build();

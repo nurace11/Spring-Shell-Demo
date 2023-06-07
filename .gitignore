@@ -35,3 +35,5 @@ build/
 ### ShellTestApp ###
 /files/
 spring-shell.log
+/spring-shell.log
+./spring-shell.log
