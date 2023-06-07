@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.shell.command.CommandRegistration;
 
 @Configuration
-public class D47_HelpOptions {
+public class D46_HelpOptions {
 
     @Bean
     public CommandRegistration commandRegistrationWithHelpOptions() {

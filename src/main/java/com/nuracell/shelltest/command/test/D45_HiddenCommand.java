@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.shell.command.CommandRegistration;
 
 @Configuration
-public class D46_HiddenCommand {
+public class D45_HiddenCommand {
 
     @Bean
     public CommandRegistration hiddenCommandRegistration() {
